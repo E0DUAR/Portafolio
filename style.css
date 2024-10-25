@@ -1,6 +1,67 @@
+:root {
+    /* Version Light */
+    --color-fondo-light: #F3F3E0;
+    --color-titulo-light: #133E87;
+    --color-texto-light: #133E87;
+    --color-boton-light: #608BC1;
+    --color-boton-texto-light: #F3F3E0;
+    --color-link-light: #133E87;
+    --color-link-hover-light: #608BC1;
+
+    /* Version Dark */
+    --color-fondo-dark: #091057;
+    --color-titulo-dark: #EC8305;
+    --color-texto-dark: #DBD3D3;
+    --color-boton-dark: #024CAA;
+    --color-boton-texto-dark: #DBD3D3;
+    --color-link-dark: #EC8305;
+    --color-link-hover-dark: #024CAA;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* Light Mode */
+body {
+    background-color: var(--color-fondo-light);
+    color: var(--color-texto-light);
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-titulo-light);
+}
+a {
+    color: var(--color-link-light);
+}
+a:hover {
+    color: var(--color-link-hover-light);
+}
+button {
+    background-color: var(--color-boton-light);
+    color: var(--color-boton-texto-light);
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--color-fondo-dark);
+    color: var(--color-texto-dark);
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+    color: var(--color-titulo-dark);
+}
+body.dark-mode a {
+    color: var(--color-link-dark);
+}
+body.dark-mode a:hover {
+    color: var(--color-link-hover-dark);
+}
+body.dark-mode button {
+    background-color: var(--color-boton-dark);
+    color: var(--color-boton-texto-dark);
+}
+
+/* ------------------------------------------------------------------------------------------- */
+/* Classes */
 .clase__titulo-sitio {
-    /* Estilos para el título del sitio web */
-    color: #000000;
+    color: var(--color-texto-light); /* Default to light mode color */
 }
 
 .clase__menu-principal ul {
@@ -24,8 +85,8 @@
 
 .clase__descargar-cv button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--color-boton-light); /* Default to light mode color */
+    color: var(--color-boton-texto-light); /* Default to light mode color */
     border: none;
     cursor: pointer;
 }
