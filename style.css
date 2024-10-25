@@ -1,0 +1,37 @@
+.clase__titulo-sitio {
+    /* Estilos para el título del sitio web */
+    color: #000000;
+}
+
+.clase__menu-principal ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.clase__menu-principal li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.clase__acerca-de-mi,
+.clase__pasatiempos-habilidades,
+.clase__formaciones-cursos,
+.clase__experiencia-programacion,
+.clase__formulario-contacto,
+.clase__descargar-cv {
+    margin: 20px 0;
+}
+
+.clase__descargar-cv button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.clase__footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
