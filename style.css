@@ -197,6 +197,7 @@ body.dark-mode button {
     height: 300px; 
     border-radius: 50%; 
     object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 1, 1, 0.5);
 }
 
 
@@ -207,6 +208,104 @@ body.dark-mode button {
     gap: 20px;
 }
 
+
+
+#hobbies {
+    padding: 20px;
+    background-color: var(--color-boton-texto-light);
+}
+
+.hobbies {
+    padding: 5% 10% 5% 10%; 
+    display: flex;
+    justify-content: space-between; /* Espacia el contenido y las imágenes */
+    align-items: center; /* Alinea el contenido en la parte superior */
+    gap: 30px; 
+}
+
+.hobbies__contenido {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hobbies__fotos {
+    width: 40%;
+}
+
+.gallery {
+    display: grid; /* Usa grid para organizar las imágenes */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.gallery img {
+    width: 200px; /* Hace que las imágenes ocupen el 100% del contenedor */
+    height: 200px; /* Mantiene la proporción */
+    border-radius: 30%; /* Opcional: añade bordes redondeados */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Escala la imagen al 105% al pasar el mouse */
+}
+
+
+
+
+.Skills {
+    padding: 5% 10% 5% 10%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.skills__contenedor {
+    display: grid; /* Usa grid para organizar las cajas */
+    grid-template-columns: repeat(5, 1fr); /* 5 cajas por fila */
+    gap: 20px; /* Espacio entre las cajas */
+}
+
+.skill__item {
+    background-color: #fff; /* Color de fondo de las cajas */
+    border: 1px solid #ccc; /* Borde de las cajas */
+    border-radius: 7px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Centra el contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de elevación */
+    transition: transform 0.3s; /* Transición para la animación al pasar el mouse */
+}
+
+.skill-description {
+    display: none; /* Oculta el texto explicativo por defecto */
+    position: absolute; /* Asegura que se superponga a la caja */
+    top: 50%; /* Centro verticalmente */
+    left: 50%; /* Centro horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición */
+    background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.skill__item:hover {
+    transform: scale(1.05); /* Escala la caja al pasar el mouse */
+}
+
+.skill__item i {
+    font-size: 40px; /* Tamaño del icono */
+    color: var(--color-fondo-dark); /* Color del icono (puedes ajustar esto) */
+}
+
+.skill__item h4 {
+    margin-top: 10px; /* Espacio entre el icono y el título */
+    font-size: 18px; /* Tamaño del texto del título */
+    color: #333; /* Color del texto del título */
+}
 
 
 .clase__descargar-cv button {
