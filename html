@@ -1,73 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Título del sitio web -->
-    <header class="clase__titulo-sitio">
-        <button id="toggle-theme">Toggle Theme</button>
-        <h1>Mi Portafolio</h1>
+
+    <header>
+
+        <section class="toggle-contenedor">
+            <button class="toggle-theme" id="toggle-theme">Cambiar Tema</button>
+        </section>
+
+        <section class="contenedor__navegacion">
+
+            <h1 class="clase__titulo-sitio"> <a href="#">Eduardo Mendez</a></h1>
+
+            <!-- Menú principal -->
+            <nav class="clase__menu-principal">
+                <ul>
+                    <li><a href="#sobre">Sobre mi</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Hobbies">Hobbies</a></li>
+                    <li><a href="#Experiencia">Experiencia laboral</a></li>
+                    <li><a href="#Proyectos">Proyectos</a></li>
+                    <li><a href="#Formación">Formación</a></li>
+                </ul>
+            </nav>
+        </section>
+
     </header>
 
-    <!-- Menú principal -->
-    <nav class="clase__menu-principal">
-        <ul>
-            <li><a href="#acerca">Acerca de Mí</a></li>
-            <li><a href="#pasatiempos">Pasatiempos y Habilidades Blandas</a></li>
-            <li><a href="#formaciones">Formaciones y Cursos</a></li>
-            <li><a href="#experiencia">Experiencia en Programación</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
 
-    <!-- Sección Acerca de Mí -->
-    <section id="acerca" class="clase__acerca-de-mi">
-        <h2>Acerca de Mí</h2>
-    </section>
+    <main class="main">
 
-    <!-- Sección Pasatiempos y Habilidades Blandas -->
-    <section id="pasatiempos" class="clase__pasatiempos-habilidades">
-        <h2>Pasatiempos y Habilidades Blandas</h2>
-    </section>
+        <!-- Sección de introducción -->
+        <section class="section-introduccion">
+        
+            <div class="clase__introduccion">
+        
+                <div class="clase__contenido-izquierdo">
+                    <h1 class="clase__titulo-sitio-header">Hola, mi nombre es Luis Eduardo Dizu Mendez</h1>
+                    <h2 class="clase__sub-titulo">Especialista en TI, Diseño Web y Soporte Técnico Bilingüe</h2>
+                    <p>
+                        ¡Hola! Soy Luis Eduardo Dizu Mendez, un profesional en tecnología
+                         Con más de 5 años de experiencia en diseño web, administración de CRM, 
+                         software empresarial y soporte técnico bilingüe, 
+                         Mi objetivo siempre ha sido aportar valor y apoyar el crecimiento de empresas 
+                         y proyectos en los que participo. Me motiva el aprendizaje continuo y 
+                         la actualización constante, elementos clave para ofrecer soluciones que 
+                         realmente marquen la diferencia. Mi versatilidad es mi fortaleza, y siempre 
+                         estoy listo para enfrentar nuevos desafíos.
+                    </p>
+        
+                    <nav class="clase__menu-principal">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-github"></i> Github</a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Currículo</a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        
+        
+                <div class="clase__contenido-derecho">
+                    <img class="image" src="./assets/Luis Eduardo Dizu Mendez.png" alt="Descripción de la imagen">
+                </div>
+        
+            </div>
 
-    <!-- Sección Formaciones y Cursos -->
-    <section id="formaciones" class="clase__formaciones-cursos">
-        <h2>Formaciones y Cursos</h2>
-    </section>
-
-    <!-- Sección de Experiencia en Programación -->
-    <section id="experiencia" class="clase__experiencia-programacion">
-        <h2>Experiencia en Programación</h2>
-    </section>
-
-    <!-- Formulario de Contacto -->
-    <section id="contacto" class="clase__formulario-contacto">
-        <h2>Contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre">
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        </section>
 
 
-    <!-- Botón para descargar el currículum -->
-    <section class="clase__descargar-cv">
-        <a href="ruta/a/tu/curriculo.pdf" download>
-            <button>Descargar Currículum</button>
-        </a>
-    </section>
+        <!-- Sección Acerca de Mí -->
+        <section id="acerca" class="seccion__acerca">
+            <h2>Acerca de Mí</h2>
+            <p>Soy un especialista en TI colombiano con un enfoque en la mejora continua y la innovación. A lo largo de mi trayectoria profesional, he tenido la oportunidad de colaborar en diversas empresas y proyectos, lo que me ha permitido desarrollar una sólida experiencia en la administración de sitios web y en el soporte de infraestructura tecnológica.</p>
+            <p>Mi misión es contribuir de manera significativa en cada fase de un proyecto, cuidando cada detalle para garantizar una experiencia óptima para los usuarios. Disfruto enfrentar nuevos retos y aprender constantemente, buscando siempre implementar soluciones que se alineen con las necesidades de cada cliente.            </p>
+        </section>
+
+
+        <!-- Formulario de Contacto -->
+        <section id="contacto" class="clase__formulario-contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+
+        <!-- Botón para descargar el currículum -->
+        <section class="clase__descargar-cv">
+            <a href="ruta/a/tu/curriculo.pdf" download>
+                <button>Descargar Currículum</button>
+            </a>
+        </section>
+
+    </main>
 
 
     <!-- Footer -->
@@ -75,6 +121,7 @@
         <p>&copy; 2024 Mi Portafolio</p>
     </footer>
 
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>

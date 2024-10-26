@@ -8,6 +8,9 @@
     --color-link-light: #133E87;
     --color-link-hover-light: #608BC1;
 
+    --font: 'Poppins', sans-serif;
+
+
     /* Version Dark */
     --color-fondo-dark: #091057;
     --color-titulo-dark: #EC8305;
@@ -18,21 +21,51 @@
     --color-link-hover-dark: #024CAA;
 }
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font);
+    background-color: #fff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+;
+
 /* ------------------------------------------------------------------------------------------- */
 /* Light Mode */
 body {
     background-color: var(--color-fondo-light);
     color: var(--color-texto-light);
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--color-titulo-light);
 }
+
 a {
     color: var(--color-link-light);
 }
+
 a:hover {
     color: var(--color-link-hover-light);
 }
+
 button {
     background-color: var(--color-boton-light);
     color: var(--color-boton-texto-light);
@@ -40,19 +73,28 @@ button {
 
 /* ------------------------------------------------------------------------------------------- */
 /* Dark Mode */
-body.dark-mode {
+body.dark-mode .section-introduccion {
     background-color: var(--color-fondo-dark);
     color: var(--color-texto-dark);
 }
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
     color: var(--color-titulo-dark);
 }
+
 body.dark-mode a {
     color: var(--color-link-dark);
 }
+
 body.dark-mode a:hover {
     color: var(--color-link-hover-dark);
 }
+
 body.dark-mode button {
     background-color: var(--color-boton-dark);
     color: var(--color-boton-texto-dark);
@@ -60,8 +102,43 @@ body.dark-mode button {
 
 /* ------------------------------------------------------------------------------------------- */
 /* Classes */
-.clase__titulo-sitio {
-    color: var(--color-texto-light); /* Default to light mode color */
+
+
+/*--------------Comienza Header-------------------------------*/
+
+
+.toggle-contenedor {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1% 10% 1% 10%;
+    background-color: var(--color-boton-light);
+}
+
+.toggle-theme {
+    background-color: var(--color-boton-dark);
+    border: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 7px;
+    margin-right: 50px;
+}
+
+.contenedor__navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10% 1% 10%;
+
+}
+
+.clase__titulo-sitio-header {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+.clase__sub-titulo {
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .clase__menu-principal ul {
@@ -72,21 +149,72 @@ body.dark-mode button {
 .clase__menu-principal li {
     display: inline;
     margin-right: 10px;
+
 }
 
-.clase__acerca-de-mi,
-.clase__pasatiempos-habilidades,
-.clase__formaciones-cursos,
-.clase__experiencia-programacion,
-.clase__formulario-contacto,
-.clase__descargar-cv {
-    margin: 20px 0;
+.clase__menu-principal i {
+    margin-left: 10px;
+    /* Espacio entre el texto y el icono */
 }
+
+
+/*--------------Comienza Main-------------------------------*/
+
+/*
+.main {
+    padding: 1% 10% 1% 10%;
+}
+*/
+
+.section-introduccion {
+    width: 100% !important; /* Asegura que la sección ocupe el ancho completo */
+    padding: 0 !important; /* Elimina el relleno para que no haya espacio */
+    background-color: var(--color-fondo-light); /* Cambia este color según tus necesidades */
+}
+
+.clase__introduccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 5% 10% 5% 10%;    
+}
+
+.clase__introduccion p {
+    font-family: var(--font);
+}
+
+.clase__contenido-izquierdo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.image {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+
+.seccion__acerca {
+    padding: 3% 40% 3% 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
 
 .clase__descargar-cv button {
     padding: 10px 20px;
-    background-color: var(--color-boton-light); /* Default to light mode color */
-    color: var(--color-boton-texto-light); /* Default to light mode color */
+    background-color: var(--color-boton-light);
+    /* Default to light mode color */
+    color: var(--color-boton-texto-light);
+    /* Default to light mode color */
     border: none;
     cursor: pointer;
 }
