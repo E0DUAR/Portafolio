@@ -1,17 +1,27 @@
 :root {
     /* Version Light */
-    --color-fondo-light: #F3F3E0;
-    --color-titulo-light: #133E87;
-    --color-texto-light: #133E87;
-    --color-boton-light: #608BC1;
-    --color-boton-texto-light: #F3F3E0;
-    --color-link-light: #133E87;
-    --color-link-hover-light: #608BC1;
+    --color-fondo-blue: #0A2342;
+    --color-fondo-light: #FEFFDE;
+    --color-fondo-light-contraste: #C9C9C9;
+
+    /* Rest of the code remains the same */
+
+    --color-titulo-blue: #0A2342;
+    --color-titulo-light: #F3F4F6;
+
+    --color-texto-blue: #061323;
+    --color-texto-light: #F3F3E0;
+
+    --color-boton-orange: #FF8C42;
+    --color-boton-orange-hover: #4A6FA5;
+
+    --color-link-light: #FF8C42;
+    --color-link-hover-light: #4A6FA5;
 
     --font: 'Poppins', sans-serif;
-
 }
 
+/* Reset CSS */
 *,
 *::before,
 *::after {
@@ -19,24 +29,12 @@
     padding: 0;
 }
 
+/* Global Styles */
 body {
     box-sizing: border-box;
     font-family: var(--font);
-    background-color: #fff;
-    color: #333;
-}
-
-a {
-    text-decoration: none;
-}
-
-;
-
-/* ------------------------------------------------------------------------------------------- */
-/* Main */
-body {
-    background-color: var(--color-fondo-light);
-    color: var(--color-texto-light);
+    background-color: #ffffff;
+    
 }
 
 h1,
@@ -46,10 +44,11 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--color-titulo-light);
+    color: var(--color-titulo-blue);
 }
 
 a {
+    text-decoration: none;
     color: var(--color-link-light);
 }
 
@@ -58,32 +57,30 @@ a:hover {
 }
 
 button {
-    background-color: var(--color-boton-light);
-    color: var(--color-boton-texto-light);
+    background-color: var(--color-boton-orange);
+    color: var(--color-texto-light);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: var(--color-boton-hover-light);
+    background-color: var(--color-boton-orange-hover);
+    cursor: pointer;
 }
 
+/* Navigation Styles */
 .contenedor__navegacion {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2% 10% 2% 10%;
-
-}
-
-.clase__titulo-sitio-header {
-    font-size: 40px;
-    font-weight: 600;
+    background-color: var(--color-fondo-blue);
 }
 
 
-.clase__sub-titulo {
-    font-size: 15px;
-    font-weight: 400;
-}
+
+
 
 .clase__menu-principal ul {
     list-style-type: none;
@@ -93,7 +90,6 @@ button:hover {
 .clase__menu-principal li {
     display: inline;
     margin-right: 10px;
-
 }
 
 .clase__menu-principal i {
@@ -101,12 +97,12 @@ button:hover {
 }
 
 
-/*--------------Comienza Main-------------------------------*/
 
+/* Introduction Styles */
 .section-introduccion {
     width: 100%;
     padding: 0;
-    background-color: var(--color-fondo-light);
+    background-color: var(--color-fondo-blue);
 }
 
 .clase__introduccion {
@@ -117,8 +113,20 @@ button:hover {
     padding: 5% 10% 5% 10%;
 }
 
+.clase__titulo-sitio-header {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-titulo-light);
+}
+
+.clase__sub-titulo {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-link-light);
+}
+
 .clase__introduccion p {
-    font-family: var(--font);
+    color: var(--color-texto-light);
 }
 
 .clase__contenido-izquierdo {
@@ -127,7 +135,6 @@ button:hover {
     flex-direction: column;
     gap: 20px;
 }
-
 
 .image {
     width: 300px;
@@ -138,27 +145,26 @@ button:hover {
 }
 
 
+
+/* About Styles */
 .seccion__acerca {
-    padding: 3% 40% 3% 10%;
+    padding: 5% 40% 5% 10%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: var(--color-fondo-light);
 }
 
-
-
+/* Hobbies Styles */
 #hobbies {
     padding: 20px;
-    background-color: var(--color-boton-texto-light);
 }
 
 .hobbies {
     padding: 5% 10% 5% 10%;
     display: flex;
     justify-content: space-between;
-    /* Espacia el contenido y las imágenes */
     align-items: center;
-    /* Alinea el contenido en la parte superior */
     gap: 30px;
 }
 
@@ -175,78 +181,83 @@ button:hover {
 
 .gallery {
     display: grid;
-    /* Usa grid para organizar las imágenes */
     grid-template-columns: repeat(2, 1fr);
-    /* Dos columnas */
     gap: 10px;
-    /* Espacio entre las imágenes */
 }
 
 .gallery img {
     width: 200px;
-    /* Hace que las imágenes ocupen el 100% del contenedor */
     height: 200px;
-    /* Mantiene la proporción */
     border-radius: 30%;
-    /* Opcional: añade bordes redondeados */
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
-    /* Escala la imagen al 105% al pasar el mouse */
 }
 
-
-
-
+/* Skills Styles */
 .Skills {
     padding: 5% 10% 5% 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 30px;
+    background-color: var(--color-fondo-light);
 }
 
 .skills__contenedor {
     display: grid;
-    /* Usa grid para organizar las cajas */
     grid-template-columns: repeat(5, 1fr);
-    /* 5 cajas por fila */
     gap: 20px;
-    /* Espacio entre las cajas */
 }
 
 .skill__item {
-    background-color: #fff;
-    /* Color de fondo de las cajas */
-    border: 1px solid #ccc;
-    /* Borde de las cajas */
+    background-color: #ffffff;
+    border: 1px solid #ede9e9cc;
     border-radius: 7px;
-    /* Bordes redondeados */
     padding: 20px;
-    /* Espacio interno */
     text-align: center;
-    /* Centra el contenido */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Sombra para un efecto de elevación */
+    box-shadow: 0 2px 5px rgba(20, 19, 19, 0.1);
     transition: transform 0.3s;
-    /* Transición para la animación al pasar el mouse */
+}
+
+.skill__item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.skill__item i {
+    font-size: 40px;
+    color: var(--color-boton-orange);
+}
+
+.skill__item h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    color: var(--color-texto-blue);
 }
 
 
+.skill__item p {
+    color: var(--color-texto-blue);
+}
 
+.skill__item h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--color-texto-blue);
+}
 
-
-/* Popup */
+/* Popup Styles */
 .popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(234, 119, 24, 0.537);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -286,21 +297,18 @@ button:hover {
     cursor: pointer;
 }
 
-/* Mostrar popup */
 .popup.visible {
     opacity: 1;
     visibility: visible;
 }
 
-/* Título del popup */
 .popup-title {
     font-size: 24px;
     font-weight: bold;
-    color: var(--color-titulo-light); 
+    color: var(--color-titulo-blue);
     margin-bottom: 15px;
 }
 
-/* Párrafos dentro del popup */
 .popup-paragraph {
     font-size: 16px;
     line-height: 1.6;
@@ -308,7 +316,6 @@ button:hover {
     text-align: left;
 }
 
-/* Listas dentro del popup */
 .popup-list {
     font-size: 16px;
     line-height: 1.6;
@@ -317,9 +324,8 @@ button:hover {
     text-align: left;
 }
 
-/* Enlaces dentro de las listas */
 .popup-link {
-    color: var(--color-link-light); 
+    color: var(--color-link-light);
     text-decoration: none;
 }
 
@@ -330,42 +336,227 @@ button:hover {
 
 
 
+/* Estilo general de la sección */
+.seccion-trabajo {
+    padding: 2rem;
+    background-color: #0A2342; /* Azul oscuro */
+    color: #F3F4F6; /* Color claro para contraste */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .seccion-trabajo h2 {
+    text-align: center;
+    color: #FF8C42; /* Color de acento */
+    margin-bottom: 2rem;
+  }
+  
 
-.skill__item:hover {
-    transform: scale(1.05);
-    /* Escala la caja al pasar el mouse */
-    cursor: pointer;
+ .contenedor__experiencias {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  
+  /* Estilo de tarjetas */
+  .tarjeta-trabajo {
+    flex: 1 1 calc(45% - 1px);
+    background: #1C3B57;
+    padding: 20px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
 }
+  
+  .tarjeta-trabajo h3 {
+    margin: 0;
+    color: var(--color-link-light)
+  }
+  
+  .fecha-trabajo,
+  .titulo-trabajo {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-boton-orange)
+  }
+  
+  .descripcion-trabajo {
+    margin: 0.5rem 0;
+  }
+  
+  .responsabilidades {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .responsabilidades li::before {
+    content: "✔";
+    margin-right: 0.5rem;
+    color: #FF8C42; /* Acento */
+  }
+  
+  .responsabilidades li {
+    margin: 0.7rem 0;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 768px) {
+    .contenedor__experiencias {
+      flex-direction: column;
+    }
+    
+    .tarjeta-trabajo {
+      flex: 1 1 100%; /* Ocupa el 100% del ancho en dispositivos pequeños */
+    }
+  }
+  
 
-.skill__item i {
-    font-size: 40px;
-    /* Tamaño del icono */
-    color: var(--color-fondo-dark);
-    /* Color del icono (puedes ajustar esto) */
-}
 
-.skill__item h4 {
-    margin-top: 10px;
-    /* Espacio entre el icono y el título */
-    font-size: 18px;
-    /* Tamaño del texto del título */
+
+
+  #experiencia-programacion {
+    padding: 2rem;
+    background-color: #f5f5f5;
     color: #333;
-    /* Color del texto del título */
+    text-align: center;
+  }
+  
+  #experiencia-programacion h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  #experiencia-programacion p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contenedor-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .tarjeta-proyecto {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tarjeta-proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imagen-proyecto {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .tarjeta-proyecto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tarjeta-proyecto p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .descripcion {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Muestra tres líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-height 0.3s ease; /* Transición suave */
 }
 
+.descripcion.expanded {
+    -webkit-line-clamp: unset; /* Elimina la restricción de líneas */
+    -webkit-box-orient: unset;
+    max-height: none; /* Muestra todo el contenido */
+}
 
+.ver-mas {
+    color: var(--color-link-light); /* Cambia el color del enlace si lo deseas */
+    cursor: pointer;
+    display: inline; /* Hace que esté en línea con el texto */
+    margin-top: 0; /* Elimina cualquier margen superior */
+    margin-bottom: 5px;
+
+}
+
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .contenedor-proyectos {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tarjeta-proyecto {
+      max-width: 90%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .tech-tags {
+    margin: 10px 0;
+  }
+  
+  .tech-tag {
+    display: inline-block;
+    background-color: #FF6900;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+  }
+
+
+
+
+
+
+
+
+  /* Download CV Styles */
 .clase__descargar-cv button {
     padding: 10px 20px;
     background-color: var(--color-boton-light);
-    /* Default to light mode color */
-    color: var(--color-boton-texto-light);
-    /* Default to light mode color */
+    color: var(--color-boton-texto);
     border: none;
     cursor: pointer;
 }
 
+/* Footer Styles */
 .clase__footer {
     text-align: center;
     padding: 10px;
     background-color: #f1f1f1;
 }
+
+

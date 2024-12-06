@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const skillsDescriptions = {
-       WordPress: `
+  const skillsDescriptions = {
+    WordPress: `
             <p class="popup-paragraph">Con más de 5 años de experiencia en el manejo y soporte de sitios web basados en WordPress, he trabajado tanto en la resolución de problemas técnicos como en el desarrollo de proyectos desde cero. Mi experiencia incluye tareas como:</p>
             <ul class="popup-list">
                 <li>Administración de sitios web</li>
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </ul><br>
             <p class="popup-paragraph">Mi enfoque está en asegurar que cada sitio web sea seguro, eficiente y esté perfectamente optimizado, para que el cliente pueda concentrarse en su negocio mientras yo gestiono la parte técnica.</p>
         `,
-        Elementor: `
+    Elementor: `
             <p class="popup-paragraph">Tengo experiencia en Elementor page builder administrando sitios web y creando diseños responsivos. He creado dos sitios web utilizando esta tecnología:</p>
 
             <ul class="popup-list">
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <li><a href="https://jycmedical.com" class="popup-link">jycmedical.com</a></li>
             </ul>
         `,
-        ServerAdmin: `
+    ServerAdmin: `
             <p class="popup-paragraph">
                 He administrado servidores web en entornos de producción y desarrollo, realizando tareas como:
             </p>
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li>Configuración y administración de dominios, correos corporativos</li>
             </ul>
         `,
-        CRM: `
+    CRM: `
             <p class="popup-paragraph">
                 Mi experiencia en la administración de CRM abarca un profundo conocimiento en plataformas como 
                 <span class="popup-link">Bitrix24</span> y <span class="popup-link">Zoho CRM</span>. 
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li>Capacitaciones personalizadas y sesiones de retroalimentación para el equipo de trabajo, asegurando un manejo eficaz de la herramienta y alineando su uso con los objetivos organizacionales</li>
             </ul>
         `,
-        Office365: `
+    Office365: `
             <p class="popup-paragraph">
                 Mi experiencia en la administración de Microsoft Office 365 abarca desde la etapa inicial de evaluación y adquisición del servicio, hasta la implementación completa y soporte continuo. Entre las actividades más destacadas que he realizado se incluyen:
             </p>
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li>Soporte técnico al usuario final, resolviendo incidencias y asegurando una experiencia fluida</li>
             </ul>
         `,
-        GoogleWorkspace: `
+    GoogleWorkspace: `
             <p class="popup-paragraph">
                 Mi experiencia en la administración de Google Workspace abarca desde la planificación inicial hasta el soporte técnico continuo. He trabajado en la implementación y optimización de esta herramienta para mejorar la colaboración y eficiencia en diferentes entornos empresariales. Entre las actividades más relevantes que he realizado se encuentran:
             </p>
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li>Soporte técnico al usuario final, brindando soluciones rápidas y eficaces para problemas cotidianos</li>
             </ul>
         `,
-        UserSupport: `
+    UserSupport: `
             <p class="popup-paragraph">
                 Mi experiencia en el área de Soporte Bilingüe al Usuario Final comenzó hace más de 3 años, trabajando en el sector BPO. He brindado servicio al cliente en inglés para empresas internacionales que operan a nivel global, destacándome por ofrecer una atención calida y una atención personalizada y orientada hacia el cuidado del usuario. Entre los tópicos más relevantes se incluyen:
                 </p>
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </p>
 
         `,
-        HTML:`
+    HTML: `
             <p class="popup-paragraph">
                 He adquirido experiencia en HTML a través de diversos proyectos, tanto académicos como personales. Durante mi trayectoria, he trabajado en:
             </p>
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="popup-link" href="https://github.com/E0DUAR" target="_blank">https://github.com/E0DUAR</a>.
             </p>
         `,
-        CSS: `
+    CSS: `
             <p class="popup-paragraph">
                 Mi experiencia en CSS se ha desarrollado a través de una variedad de proyectos académicos y personales. Entre los trabajos más destacados se encuentran:
             </p>
@@ -119,9 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="popup-link" href="https://github.com/E0DUAR" target="_blank">https://github.com/E0DUAR</a>.
             </p>        
         `,
-        JavaScript: `
+    JavaScript: `
             <p class="popup-paragraph">
-                Mi experiencia en <span JavaScript se ha desarrollado a través de proyectos académicos, personales y profesionales, lo que me ha permitido profundizar en el uso de este lenguaje para crear interactividad y mejorar la funcionalidad de páginas web. Algunos de los logros más destacados incluyen:
+                Mi experiencia en JavaScript se ha desarrollado a través de proyectos académicos, personales y profesionales, lo que me ha permitido profundizar en el uso de este lenguaje para crear interactividad y mejorar la funcionalidad de páginas web. Algunos de los logros más destacados incluyen:
             </p>
             <ul class="popup-list">
                 <li>Desarrollo de scripts personalizados para automatizar tareas y mejorar la experiencia del usuario</li>
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="popup-link" href="https://github.com/E0DUAR" target="_blank">https://github.com/E0DUAR</a>.
             </p>
         `,
-        PHP: `
+    PHP: `
             <p class="popup-paragraph">
                 Mi experiencia en PHP se ha desarrollado a través de proyectos personales y académicos, enfocándome en la creación de soluciones dinámicas y funcionales para la web. Algunos de los logros y actividades más destacadas incluyen:
             </p>
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="popup-link" href="https://github.com/E0DUAR" target="_blank">https://github.com/E0DUAR</a>.
             </p>
         `,
-        Angular: `
+    Angular: `
             <p class="popup-paragraph">
                 Mi experiencia con Angular ha sido principalmente en proyectos universitarios, donde he aprendido y aplicado las bases del desarrollo de aplicaciones web dinámicas y estructuradas. Algunas de las actividades clave en las que he trabajado incluyen:
             </p>
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="popup-link" href="https://github.com/E0DUAR" target="_blank">https://github.com/E0DUAR</a>.
             </p>    
         `,
-        MySQL: `
+    MySQL: `
             <p class="popup-paragraph">
                 Mi experiencia con <span class="popup-link">MySQL</span> incluye el trabajo con bases de datos relacionales en proyectos pequeños y medianos. Algunas de las actividades más relevantes en las que he participado son:
             </p>
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="popup-link" href="https://github.com/E0DUAR" target="_blank">https://github.com/E0DUAR</a>.
             </p>
         `,
-        ConstantContact: `
+    ConstantContact: `
             <p class="popup-paragraph">
                 Mi experiencia en Constant Contact se centra en la creación y gestión de campañas de <strong>email marketing</strong>, donde he realizado diversas actividades para optimizar el alcance y la efectividad de las campañas. Algunas de las tareas más relevantes incluyen:
             </p>
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li>Automatización de procesos mediante integraciones con plataformas como <strong>Zapier</strong> para optimizar flujos de trabajo y mejorar la productividad</li>
             </ul>
         `,
-        Mailchimp: `
+    Mailchimp: `
             <p class="popup-paragraph">
                 Mi experiencia en Mailchimp se ha centrado en la creación y gestión de campañas de <strong>email marketing</strong>, así como en la automatización de procesos para mejorar la efectividad de las comunicaciones. Algunas de las tareas que he realizado incluyen:
             </p>
@@ -197,40 +197,58 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li>Gestión y actualización de bases de datos, asegurando la correcta segmentación y personalización de los envíos</li>
                 <li>Integración de Mailchimp con plataformas externas, como <strong>WordPress</strong>, para automatizar flujos de trabajo y mejorar la experiencia del usuario</li>
             </ul>
-        `
-    };
+        `,
+  };
 
-    const items = document.querySelectorAll(".skill__item");
+  const items = document.querySelectorAll(".skill__item");
 
-    const popup = document.getElementById("popup");
-    const closeButton = document.querySelector(".popup-close");
+  const popup = document.getElementById("popup");
+  const closeButton = document.querySelector(".popup-close");
 
-    const popupTitle = document.getElementById("popup-title");
-    const popupDescription = document.getElementById("popup-description");
+  const popupTitle = document.getElementById("popup-title");
+  const popupDescription = document.getElementById("popup-description");
 
-    
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      const skill = item.getAttribute("data-skill");
 
-    items.forEach(item => {
-        item.addEventListener("click", () => {
-            const skill = item.getAttribute("data-skill");
-            
-            const title = item.querySelector(".skill__item h4").textContent;
-            popupTitle.textContent = title;
-            
-            popupDescription.innerHTML = skillsDescriptions[skill];
-            popup.classList.add("visible");
-        });
+      const title = item.querySelector(".skill__item h4").textContent;
+      popupTitle.textContent = title;
+
+      popupDescription.innerHTML = skillsDescriptions[skill];
+      popup.classList.add("visible");
     });
+  });
 
-    closeButton.addEventListener("click", () => {
-        popup.classList.remove("visible");
-    });
+  closeButton.addEventListener("click", () => {
+    popup.classList.remove("visible");
+  });
 
-    popup.addEventListener("click", (e) => {
-        // Close the popup if the user clicks outside of it
-        if (e.target === popup) {
-            popup.classList.remove("visible");
-        }
-    })
+  popup.addEventListener("click", (e) => {
+    // Close the popup if the user clicks outside of it
+    if (e.target === popup) {
+      popup.classList.remove("visible");
+    }
+  });
 });
+
+
+function alternarDescripcion(element) {
+    // Obtener el contenedor de la tarjeta que contiene la descripción
+    var tarjeta = element.closest('.tarjeta-proyecto');
+
+    // Encontrar el párrafo de la descripción dentro de esa tarjeta
+    var descripcion = tarjeta.querySelector('.descripcion');
+
+    // Alternar la clase "expanded" para cambiar el estilo
+    if (descripcion.classList.contains('expanded')) {
+        descripcion.classList.remove('expanded'); // Contraer
+        element.textContent = "...ver más"; // Cambiar el texto del enlace
+    } else {
+        descripcion.classList.add('expanded'); // Expandir
+        element.textContent = "...ver menos"; // Cambiar el texto del enlace
+    }
+}
+
+
 
