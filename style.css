@@ -89,7 +89,6 @@ button:hover {
 /* Navigation Styles */
 .contenedor__navegacion {
   display: flex;
-  ;
   justify-content: space-between;
   align-items: center;
   padding: 2% 10% 2% 10%;
@@ -113,6 +112,30 @@ button:hover {
 .clase__menu-principal i {
   margin-left: 10px;
 }
+
+
+
+.clase__menu-principal__social {
+  display: flex;
+}
+
+.clase__menu-principal__social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.clase__menu-principal__social li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.clase__menu-principal__social i {
+  margin-left: 10px;
+}
+
+
+
+
 
 
 
@@ -778,64 +801,6 @@ textarea {
 
 
 
-/* Responsive */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  .contenedor__navegacion {
-    flex-direction: column;
-    /* Cambia la dirección del menú a columna */
-    align-items: flex-start;
-    /* Alinea los elementos al inicio */
-  }
-
-  .clase__introduccion {
-    flex-direction: column;
-    /* Cambia la dirección a columna */
-    align-items: center;
-    /* Centra los elementos */
-  }
-
-  .clase__contenido-izquierdo {
-    width: 100%;
-    /* Ocupa el 100% del ancho */
-  }
-
-  .hobbies {
-    flex-direction: column;
-    /* Cambia la dirección a columna */
-  }
-
-  .tarjeta-trabajo,
-  .tarjeta-proyecto {
-    flex: 1 1 100%;
-    /* Ocupa el 100% del ancho */
-    margin-bottom: 1rem;
-    /* Espacio entre tarjetas */
-  }
-
-  .contacto-formulario {
-    width: 90%;
-    /* Ancho del formulario */
-    margin: 0 auto;
-    /* Centra el formulario */
-  }
-
-  .descargar-cv-contenido {
-    margin-top: 30px;
-    /* Ajusta el margen superior */
-  }
-
-  .footer {
-    font-size: 0.8rem;
-    /* Reduce el tamaño de fuente en el pie de página */
-  }
-}
-
-
-
 /* Para móviles */
 @media (max-width: 480px) {
   body {
@@ -883,6 +848,16 @@ textarea {
   }
    /*TERMINA NAVEGACION*/
 
+
+  /*INTRODUCCION*/
+  .clase__introduccion {
+    flex-direction: column;
+  }
+
+  .clase__contenido-izquierdo {
+    width: 100%;
+  }
+
   .clase__titulo-sitio-header {
     font-size: 28px;
   }
@@ -891,45 +866,94 @@ textarea {
     font-size: 12px;
   }
 
-  .boton-enviar,
-  .boton-descargar-cv {
-    padding: 10px;
-    
-    font-size: 14px;
-   
+  .clase__menu-principal__social ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+  }
+  
+  .clase__menu-principal__social i {
+    margin-left: 20px;
+  }
+
+  .clase__contenido-derecho {
+    padding-top: 20px;
   }
 
   .image {
     width: 150px;
-    
     height: 150px;
-    
+  }
+
+   /*ACERCA*/
+  .seccion__acerca {
+    padding: 5% 10% 5% 10%;
+  }
+   /*TERMINA ACERCA*/
+
+  /*HOBBIES*/
+  .hobbies {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hobbies__contenido {
+    width: 100%; /*REVISAR*/
+  }
+
+  .hobbies__fotos {
+    width: 100%;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .gallery img {
-    width: 100%;
-    
-    height: auto;
+    width: 100px;
+    height: 100px;
+  }
+ /*TERMINA HOBBIES*/
+
+
+ /*SKILLS*/
+ .Skills {
+  padding: 5% 10% 5% 10%; 
   }
 
-  .tarjeta-formacion {
-    padding: 1em;
-    /* Reduce el padding de las tarjetas de formación */
+  .skills__contenedor {
+    grid-template-columns: repeat(1, 1fr); /* Cambiar a 3 columnas */
   }
 
-  .tarjeta-formacion h3 {
-    font-size: 1.2em;
-    /* Tamaño de título más pequeño en tarjetas de formación */
+  .skill__item {
+    padding: 18px; /* Ajustar el padding */
   }
 
-  .tarjeta-formacion .descripcion {
-    font-size: 0.9em;
-    /* Tamaño de descripción más pequeño */
+  .skill__item i {
+    font-size: 38px; /* Ajustar el tamaño del icono */
   }
 
-  .tarjeta-formacion .habilidades li {
-    font-size: 0.8em;
-    /* Tamaño de habilidades más pequeño */
+  .skill__item h2 {
+    font-size: 24px; /* Ajustar el tamaño del título */
   }
 
+  .skill__item h4 {
+    font-size: 17px; /* Ajustar el tamaño del subtítulo */
+  }
+
+  .popup-content {
+    max-width: 70%; /* Ajustar el contenido del popup */
+    max-height: 500px; /* Establecer un alto máximo */
+  overflow-y: auto;  
+  }
+
+  .popup-title {
+    font-size: 22px; /* Ajustar el tamaño del título del popup */
+  }
+
+  .popup-paragraph,
+  .popup-list {
+    font-size: 15px; /* Ajustar el tamaño de la fuente del texto del popup */
+  }
+   /*TERMINA SKILLS*/
 }
