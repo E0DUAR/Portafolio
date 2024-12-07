@@ -252,3 +252,13 @@ function alternarDescripcion(element) {
 
 
 
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("clase__menu-principal");
+
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("active"); // Alterna la clase 'active' para mostrar u ocultar el menú
+});
+
+
+
+

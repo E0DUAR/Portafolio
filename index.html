@@ -8,75 +8,80 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 
 <body>
-    <!-- Título del sitio web -->
-
+    
     <header>
-
         <section class="contenedor__navegacion">
-
+            <!-- Título del sitio web -->
             <h1 class="clase__titulo-sitio"> <a href="#">Eduardo Mendez</a></h1>
 
-            <!-- Menú principal -->
-            <nav class="clase__menu-principal">
-                <ul>
-                    <li><a href="#sobre">Sobre mi</a></li>
-                    <li><a href="#Hobbies">Hobbies</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="#Experiencia">Experiencia laboral</a></li>
-                    <li><a href="#Proyectos">Proyectos</a></li>
-                    <li><a href="#Formación">Formación</a></li>
-                </ul>
-            </nav>
+            <div class="menu__mobile">
+                <!-- Ícono de hamburguesa -->
+                <div class="menu-toggle" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Menú principal -->
+                <nav class="clase__menu-principal" id="clase__menu-principal">
+                    <ul>
+                        <li><a href="#sobre">Sobre mi</a></li>
+                        <li><a href="#Hobbies">Hobbies</a></li>
+                        <li><a href="#Skills">Skills</a></li>
+                        <li><a href="#experiencia-laboral">Experiencia laboral</a></li>
+                        <li><a href="#experiencia-programacion">Proyectos de programación</a></li>
+                        <li><a href="#formacion-academica">Formación</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </section>
-
     </header>
-
 
     <main class="main">
 
-        <!-- Sección de introducción -->
         <section class="section-introduccion">
 
-            <div class="clase__introduccion">
-
+            <article class="clase__introduccion">
+        
+                <!-- Contenido izquierdo -->
                 <div class="clase__contenido-izquierdo">
                     <h1 class="clase__titulo-sitio-header">Hola, mi nombre es Luis Eduardo Dizu Mendez</h1>
                     <h2 class="clase__sub-titulo">Especialista en TI, Diseño Web y Soporte Técnico Bilingüe</h2>
                     <p>
                         ¡Hola! Soy Luis Eduardo Dizu Mendez, un profesional en tecnología
-                        Con más de 5 años de experiencia en diseño web, administración de CRM,
-                        software empresarial y soporte técnico bilingüe,
+                        con más de 5 años de experiencia en diseño web, administración de CRM,
+                        software empresarial y soporte técnico bilingüe.
                         Mi objetivo siempre ha sido aportar valor y apoyar el crecimiento de empresas
                         y proyectos en los que participo. Me motiva el aprendizaje continuo y
                         la actualización constante, elementos clave para ofrecer soluciones que
                         realmente marquen la diferencia. Mi versatilidad es mi fortaleza, y siempre
                         estoy listo para enfrentar nuevos desafíos.
                     </p>
-
+        
                     <nav class="clase__menu-principal">
                         <ul>
-                            <li><a href="https://github.com/E0DUAR" target="_blank"><i class="fab fa-github"></i>
-                                    Github</a></li>
-                            <li><a href="https://www.linkedin.com/in/eduardo-mendez-it/" target="_blank"><i
-                                        class="fab fa-linkedin"></i> Linkedin</a></li>
-                            <li><a href="#"><i class="fas fa-file-alt" target="_blank"></i> Currículo</a></li>
-                            <li><a href="#"><i class="fab fa-whatsapp" target="_blank"></i> Whatsapp</a></li>
+                            <li><a href="https://github.com/E0DUAR" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/eduardo-mendez-it/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Currículo</a></li>
+                            <li><a href="https://wa.me/573005904287?text=Hola%20te%20escribo%20desde%20tu%20portafolio%20web%20para%20conocerte%20mejor" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                              
                         </ul>
                     </nav>
                 </div>
-
-
+        
+                <!-- Contenido derecho -->
                 <div class="clase__contenido-derecho">
-                    <img class="image" src="./assets/Luis Eduardo Dizu Mendez.png" alt="Descripción de la imagen">
+                    <img class="image" src="./assets/Luis Eduardo Dizu Mendez.png" alt="Fotografía de Luis Eduardo Dizu Mendez">
                 </div>
-
-            </div>
-
+        
+            </article>
         </section>
-
+        
 
         <!-- Sección Acerca de Mí -->
         <section id="sobre" class="seccion__acerca">
@@ -94,10 +99,9 @@
         </section>
 
 
-
         <!-- Sección Hobbies -->
         <section id="Hobbies">
-            <div class="hobbies">
+            <article class="hobbies">
                 <div class="hobbies__contenido">
                     <h2>Mis Hobbies</h2>
                     <p>Además de mi trabajo, me apasiona explorar nuevos lugares y culturas, ya sea en moto o viajando a
@@ -113,10 +117,11 @@
                         <img src="./assets/Cartagena-moto-travel.jpg" alt="Cartagena colombia">
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
 
 
+        <!-- Sección Skills -->
         <section id="Skills" class="Skills">
             <h2>Skills</h2>
             <p>Haz clic en cada caja para ver mi experiencia con cada habilidad.</p>
@@ -212,17 +217,14 @@
         </section>
 
 
-
-
-
+        <!-- Sección experiencia laboral -->
         <section id="experiencia-laboral" class="seccion-trabajo">
 
             <h2>Experiencia Laboral</h2>
 
-
             <div class="contenedor__experiencias">
 
-                <div class="tarjeta-trabajo">
+                <article class="tarjeta-trabajo">
                     <h3>Web Support Expert (Bilingüe)</h3>
                     <p class="fecha-trabajo">Agosto 2024 - Presente</p>
                     <p class="titulo-trabajo">Taskus</p>
@@ -238,9 +240,9 @@
                         <li>Ayudar a los usuarios con cualquier problema técnico referente a sus cuentas de dominio y
                             hosting.</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="tarjeta-trabajo">
+                <article class="tarjeta-trabajo">
                     <h3>Bilingual Customer Service Representative (Bilingüe)</h3>
                     <p class="fecha-trabajo">Junio 2023 - Julio 2024</p>
                     <p class="titulo-trabajo">Alorica</p>
@@ -257,9 +259,9 @@
                         <li>Brindar soporte técnico y administrativo a las tiendas aliadas para resolver problemas
                             relacionados con los contratos y pagos.</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="tarjeta-trabajo">
+                <article class="tarjeta-trabajo">
                     <h3>Head of It Department <span style="color: white;">|</span> It Support Specialist (Bilingüe)</h3>
                     <p class="fecha-trabajo">Agosto 2022 - Marzo 2023 <span style="color: white;">|</span> Agosto 2021-
                         Agosto 2022</p>
@@ -283,9 +285,9 @@
                         <li>Administración de campañas de email marketing en plataformas como Mailchimp y Constant
                             Contact. </li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="tarjeta-trabajo">
+                <article class="tarjeta-trabajo">
                     <h3>Analista de Sistemas</h3>
                     <p class="fecha-trabajo">Agosto 2019 - Junio 2021</p>
                     <p class="titulo-trabajo">Fábrica de Calzado Rómulo</p>
@@ -302,34 +304,32 @@
                         <li>Administración de Office 365: gestión de usuarios, roles, archivos compartidos y resolución
                             de incidencias. </li>
                     </ul>
-                </div>
-
+                </article>
 
             </div>
 
         </section>
 
 
-
-
-
-
-
+        <!-- Sección experiencia en programacion -->
         <section id="experiencia-programacion" class="experiencia-programacion">
+
             <h2>Mis Proyectos de Programación y proyectos personales</h2>
             <p>A continuación te muestro algunos de los proyectos que he realizado utilizando diversas tecnologías.
-                Puedes ver el código fuente de estos proyectos en mi <a href="https://github.com/E0DUAR?tab=repositories" target="_blank">GitHub</a>.</p>
-        
+                Puedes ver el código fuente de estos proyectos en mi <a
+                    href="https://github.com/E0DUAR?tab=repositories" target="_blank">GitHub</a>.</p>
+
             <div class="contenedor-proyectos">
-        
-                <!-- Tarjeta 1 -->
-                <div class="tarjeta-proyecto">
-                    <img src="/assets/portafolio imagen.png" alt="Imagen representativa del portafolio" class="imagen-proyecto">
+
+                
+                <article class="tarjeta-proyecto">
+                    <img src="/assets/portafolio imagen.png" alt="Imagen representativa del portafolio"
+                        class="imagen-proyecto">
                     <h3>Portafolio Personal</h3>
                     <p class="descripcion">Un recorrido a través de mis habilidades, experiencia y proyectos. Incluye
                         secciones sobre mí, mis pasatiempos, formaciones, experiencia en programación y un formulario de
                         contacto. </p>
-                        <a href="javascript:void(0);" id="ver-mas" onclick="alternarDescripcion(this)">...ver más</a>
+                    <a href="javascript:void(0);" id="ver-mas" onclick="alternarDescripcion(this)">...ver más</a>
 
                     <div class="tech-tags">
                         <span class="tech-tag">HTML</span>
@@ -337,14 +337,16 @@
                         <span class="tech-tag">JavaScript</span>
                     </div>
                     <a href="https://github.com/E0DUAR/Portafolio" target="_blank">Ver en GitHub</a>
-                </div>
-        
+                </article>
+
                 <!-- Tarjeta 2 -->
-                <div class="tarjeta-proyecto">
-                    <img src="/assets/encriptador imagen.png" alt="Imagen representativa del enpriptador" class="imagen-proyecto">
+                <article class="tarjeta-proyecto">
+                    <img src="/assets/encriptador imagen.png" alt="Imagen representativa del enpriptador"
+                        class="imagen-proyecto">
                     <h3>El Encriptador</h3>
                     <p class="descripcion">Este proyecto permite al usuario encriptar y desencriptar texto utilizando un
-                        conjunto de reglas definidas. El texto encriptado puede ser copiado al portapapeles y el texto desencriptado se muestra en el área correspondiente. </p>
+                        conjunto de reglas definidas. El texto encriptado puede ser copiado al portapapeles y el texto
+                        desencriptado se muestra en el área correspondiente. </p>
                     <a href="javascript:void(0);" class="ver-mas" onclick="alternarDescripcion(this)">...ver más</a>
                     <div class="tech-tags">
                         <span class="tech-tag">HTML</span>
@@ -352,59 +354,72 @@
                         <span class="tech-tag">JavaScript</span>
                     </div>
                     <a href="https://github.com/E0DUAR/encriptador" target="_blank">Ver en GitHub</a>
-                </div>
-        
+                </article>
+
                 <!-- Tarjeta 3 -->
-                <div class="tarjeta-proyecto">
-                    <img src="/assets/juego numero secreto imaegn.png" alt="Imagen representativa del juego numero secreto" class="imagen-proyecto">
+                <article class="tarjeta-proyecto">
+                    <img src="/assets/juego numero secreto imaegn.png"
+                        alt="Imagen representativa del juego numero secreto" class="imagen-proyecto">
                     <h3>Juego del Número Secreto</h3>
                     <p class="descripcion">En este juego, introduces un número entre 1 y 10, y el juego te indica si el
-                        número secreto es mayor o menor al que ingresaste. Cuando aciertas, te muestra cuántos intentos te tomó y revela cuál era el número secreto.</p>
+                        número secreto es mayor o menor al que ingresaste. Cuando aciertas, te muestra cuántos intentos
+                        te tomó y revela cuál era el número secreto.</p>
                     <a href="javascript:void(0);" class="ver-mas" onclick="alternarDescripcion(this)">...ver más</a>
                     <div class="tech-tags">
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>
                         <span class="tech-tag">JavaScript</span>
                     </div>
-                    <a href="https://github.com/E0DUAR/Juego-Javascript-Numero-Secreto" target="_blank">Ver en GitHub</a>
-                </div>
-        
+                    <a href="https://github.com/E0DUAR/Juego-Javascript-Numero-Secreto" target="_blank">Ver en
+                        GitHub</a>
+                </article>
+
                 <!-- Tarjeta 4 -->
-                <div class="tarjeta-proyecto">
+                <article class="tarjeta-proyecto">
                     <img src="ruta/a/imagen2.jpg" alt="Imagen representativa del Proyecto 2" class="imagen-proyecto">
                     <h3>Agenda Digital</h3>
-                    <p class="descripcion">Este proyecto universitario consiste en una aplicación que permite administrar
-                        notificaciones sobre el comportamiento de los estudiantes, registrar notas sobre ausencias por parte de los padres y gestionar horarios de atención de los docentes. La parte frontend fue desarrollada en Angular, y el backend utiliza PHP para la conexión a una base de datos MySQL.</p>
+                    <p class="descripcion">Este proyecto universitario consiste en una aplicación que permite
+                        administrar
+                        notificaciones sobre el comportamiento de los estudiantes, registrar notas sobre ausencias por
+                        parte de los padres y gestionar horarios de atención de los docentes. La parte frontend fue
+                        desarrollada en Angular, y el backend utiliza PHP para la conexión a una base de datos MySQL.
+                    </p>
                     <a href="javascript:void(0);" class="ver-mas" onclick="alternarDescripcion(this)">...ver más</a>
                     <div class="tech-tags">
                         <span class="tech-tag">Angular</span>
                         <span class="tech-tag">PHP</span>
                         <span class="tech-tag">MySQL</span>
                     </div>
-                    <a href="https://github.com/E0DUAR/Agenda_Digital_Front" target="_blank" class="github-link">Ver Frontend en GitHub</a><br>
-                    <a href="https://github.com/E0DUAR/Agenda_Digital_Backend" target="_blank" class="github-link">Ver Backend en GitHub</a>
-                </div>
-        
+                    <a href="https://github.com/E0DUAR/Agenda_Digital_Front" target="_blank" class="github-link">Ver
+                        Frontend en GitHub</a><br>
+                    <a href="https://github.com/E0DUAR/Agenda_Digital_Backend" target="_blank" class="github-link">Ver
+                        Backend en GitHub</a>
+                </article>
+
                 <!-- Tarjeta 5 -->
-                <div class="tarjeta-proyecto">
+                <article class="tarjeta-proyecto">
                     <img src="ruta/a/imagen2.jpg" alt="Imagen representativa del Proyecto 2" class="imagen-proyecto">
                     <h3>Angular Webservice con GIPHY API</h3>
                     <p class="descripcion">Este proyecto desarrollado en Angular integra la API de GIPHY, permitiendo
-                        realizar búsquedas de imágenes GIF desde la web. El frontend está basado en Angular, que se conecta con la API de GIPHY para obtener los resultados de las búsquedas.</p>
+                        realizar búsquedas de imágenes GIF desde la web. El frontend está basado en Angular, que se
+                        conecta con la API de GIPHY para obtener los resultados de las búsquedas.</p>
                     <a href="javascript:void(0);" class="ver-mas" onclick="alternarDescripcion(this)">...ver más</a>
                     <div class="tech-tags">
                         <span class="tech-tag">GIPHY API </span>
                         <span class="tech-tag">Angular</span>
                     </div>
                     <a href="https://github.com/E0DUAR/Angular-Webservice-GYPHY-API-" target="_blank">Ver en GitHub</a>
-                </div>
-        
+                </article>
+
                 <!-- Tarjeta 6 -->
-                <div class="tarjeta-proyecto">
+                <article class="tarjeta-proyecto">
                     <img src="/assets/copacol imagen.png" alt="Imagen representativa copacol" class="imagen-proyecto">
                     <h3>Copacol Cali - Tienda Online</h3>
-                    <p class="descripcion">Este proyecto es una tienda online creada para el cliente Copacol, especializada
-                        en productos de ferretería. La página web fue diseñada utilizando WordPress con Elementor Page Builder y configurada con pasarelas de pago. Se realizaron personalizaciones con código CSS y JavaScript para mejorar la funcionalidad y el diseño de la tienda.</p>
+                    <p class="descripcion">Este proyecto es una tienda online creada para el cliente Copacol,
+                        especializada
+                        en productos de ferretería. La página web fue diseñada utilizando WordPress con Elementor Page
+                        Builder y configurada con pasarelas de pago. Se realizaron personalizaciones con código CSS y
+                        JavaScript para mejorar la funcionalidad y el diseño de la tienda.</p>
                     <a href="javascript:void(0);" class="ver-mas" onclick="alternarDescripcion(this)">...ver más</a>
                     <div class="tech-tags">
                         <span class="tech-tag">WordPress</span>
@@ -412,68 +427,189 @@
                         <span class="tech-tag">CSS y JavaScript</span>
                     </div>
                     <a href="https://copacolcali.com/" target="_blank">Visitar página</a>
-                </div>
-        
+                </article>
+
                 <!-- Tarjeta 7 -->
-                <div class="tarjeta-proyecto">
-                    <img src="/assets/jyc medical imagen.png" alt="Imagen representativa del jyc medical" class="imagen-proyecto">
+                <article class="tarjeta-proyecto">
+                    <img src="/assets/jyc medical imagen.png" alt="Imagen representativa del jyc medical"
+                        class="imagen-proyecto">
                     <h3>JYC Medical - Sitio Web Informativo</h3>
                     <p class="descripcion">Este proyecto es un sitio web informativo para JYC Medical, desarrollado en
-                        WordPress con Elementor Page Builder. La página proporciona detalles sobre los servicios y productos que ofrece la empresa, permitiendo a los usuarios obtener información relevante de manera clara y organizada.</p>
+                        WordPress con Elementor Page Builder. La página proporciona detalles sobre los servicios y
+                        productos que ofrece la empresa, permitiendo a los usuarios obtener información relevante de
+                        manera clara y organizada.</p>
                     <a href="javascript:void(0);" class="ver-mas" onclick="alternarDescripcion(this)">...ver más</a>
                     <div class="tech-tags">
                         <span class="tech-tag">WordPress</span>
                         <span class="tech-tag">Elementor Page Builder</span>
                     </div>
                     <a href="https://jycmedical.com/" target="_blank">Visitar página</a>
-                </div>
-        
+                </article>
+
             </div>
         </section>
-        
 
 
+        <!-- Sección formacion academica -->
+        <section id="formacion-academica">
+            <h2>Formación Académica</h2>
+
+            <!-- Tarjeta 1 -->
+            <article class="tarjeta-formacion">
+                <h3>Tecnología en Sistemas de Información</h3>
+                <p class="institucion">institución Universitaria Antonio José Camacho</p>
+                <p class="descripcion">
+                    Programa enfocado en el diseño, desarrollo y gestión de sistemas informáticos para resolver
+                    problemas empresariales y tecnológicos.
+                </p>
+                <p class="fecha"><strong>Fecha:</strong> Febrero 2021 - Febrero 2024</p>
+                <ul class="habilidades">
+                    <li>Desarrollo de software</li>
+                    <li>análisis de sistemas</li>
+                    <li>gestión de bases de datos</li>
+                </ul>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="tarjeta-formacion">
+                <h3>Técnico en Redes de Datos</h3>
+                <p class="institucion">Fundación Carlos Slim</p>
+                <p class="descripcion">
+                    Capacitación técnica para diseñar, instalar y administrar redes de datos, garantizando la
+                    conectividad eficiente en entornos corporativos.
+                </p>
+                <p class="fecha"><strong>Fecha:</strong> Marzo 2017 - Octubre 2017</p>
+                <ul class="habilidades">
+                    <li>Diseño e implementación de redes LAN/WAN</li>
+                    <li>Configuración de switches y routers</li>
+                    <li>Solución de problemas de conectividad</li>
+                </ul>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="tarjeta-formacion">
+                <h3>Técnico en Sistemas</h3>
+                <p class="institucion">Sena</p>
+                <p class="descripcion">
+                    Programa técnico que abarca la instalación, mantenimiento y reparación de equipos informáticos y
+                    software.
+                </p>
+                <p class="fecha"><strong>Fecha:</strong> Febrero 2019 - Enero 2020</p>
+                <ul class="habilidades">
+                    <li>Soporte técnico</li>
+                    <li>Gestión de redes LAN</li>
+                    <li>Ensamblaje de computadoras</li>
+                    <li>Mantenimiento de software.</li>
+                </ul>
+            </article>
 
 
+            <!-- Tarjeta 3 -->
+            <article class="tarjeta-formacion">
+                <h3>Formación Frontend</h3>
+                <p class="institucion">Alura Latam</p>
+                <p class="descripcion">
+                    Curso en desarrollo web enfocado en la creación de interfaces de usuario modernas y responsivas.
+                </p>
+                <p class="fecha"><strong>Fecha:</strong> En curso (Inicio: 2024)</p>
+                <ul class="habilidades">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Inteligencia Articial</li>
+                    <li>React</li>
+                </ul>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="tarjeta-formacion">
+                <h3>Máster en Marketing Digital y Analítica Web</h3>
+                <p class="institucion">Neetwork Business School</p>
+                <p class="descripcion">
+                    Programa especializado en estrategias digitales para mejorar la presencia en línea, optimizar
+                    campañas de marketing, analizar métricas de rendimiento web y creación de sitios web.
+                </p>
+                <p class="fecha"><strong>Fecha:</strong> En curso (Inicio: Julio 2023)</p>
+                <ul class="habilidades">
+                    <li>WordPress</li>
+                    <li>Optimizzación web</li>
+                    <li>SEO y SEM</li>
+                    <li>Email Marketing</li>
+                    <li>Google Analytics y Facebook Ads</li>
+                    <li>Social Media Marketing</li>
+                </ul>
+            </article>
 
 
+            <article class="tarjeta-formacion">
+                <h3>Scrum Fundamentals Certified</h3>
+                <p class="institucion">SCRUMStudy</p>
+                <p class="descripcion">
+                    Certificación en metodologías ágiles para la gestión eficiente de proyectos.
+                </p>
+                <p class="fecha"><strong>Fecha:</strong> Marzo 2023 - Abril 2023</p>
+                <ul class="habilidades">
+                    <li>Gestión de proyectos</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Métodos ágiles</li>
+                </ul>
+            </article>
 
-
-
-
-
-
-        <!-- Formulario de Contacto -->
-        <section id="contacto" class="clase__formulario-contacto">
-            <h2>Contacto</h2>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre">
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje"></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
         </section>
 
 
-        <!-- Botón para descargar el currículum -->
-        <section class="clase__descargar-cv">
-            <a href="ruta/a/tu/curriculo.pdf" download>
-                <button>Descargar Currículum</button>
-            </a>
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contacto-seccion">
+            <div class="contacto-contenido">
+                <h2>¡Trabajemos Juntos!</h2>
+                <p>Estoy emocionado de colaborar en proyectos independientes o por contrato. Siempre estoy listo para
+                    aprender, asumir nuevos retos y aportar soluciones creativas. Si tienes una idea, un proyecto o
+                    simplemente quieres conectar, no dudes en escribirme.</p>
+            </div>
+            <form class="contacto-formulario">
+                <div class="formulario-campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="formulario-campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="formulario-campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+                <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+            </form>
+
+            <div class="descargar-cv-contenido">
+                <a href="ruta/a/tu/curriculo.pdf" download class="boton-descargar-cv">
+                    Descargar Currículum
+                </a>
+            </div>
         </section>
 
     </main>
 
 
     <!-- Footer -->
-    <footer class="clase__footer">
-        <p>&copy; 2024 Mi Portafolio</p>
+    <footer class="footer">
+        <div class="footer-contenido">
+            <p>&copy; 2024 Luis Eduardo Dizu Mendez. Todos los derechos reservados.</p>
+            <div class="footer-redes">
+
+                <nav class="clase__menu-principal">
+                    <ul>
+                        <li><a href="https://github.com/E0DUAR" target="_blank"><i class="fab fa-github"></i>
+                                Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/eduardo-mendez-it/" target="_blank"><i
+                                    class="fab fa-linkedin"></i> Linkedin</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt" target="_blank"></i> Currículo</a></li>
+                        <li><a href="https://wa.me/573005904287?text=Hola%20te%20escribo%20desde%20tu%20portafolio%20web%20para%20conocerte%20mejor" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </footer>
 
     <script src="./script.js"></script>
