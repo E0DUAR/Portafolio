@@ -798,8 +798,15 @@ textarea {
   font-size: 1rem;
 }
 
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
 
-
+.mensaje-enviado {
+  color: green;
+  font-size: 0.9rem;
+}
 
 /* Para móviles */
 @media (max-width: 480px) {

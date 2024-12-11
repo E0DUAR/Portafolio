@@ -569,20 +569,29 @@
                     aprender, asumir nuevos retos y aportar soluciones creativas. Si tienes una idea, un proyecto o
                     simplemente quieres conectar, no dudes en escribirme.</p>
             </div>
-            <form class="contacto-formulario">
+            <form  id="contacto-formulario" class="contacto-formulario" type="POST">
                 <div class="formulario-campo">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    <p class="error"></p>
                 </div>
                 <div class="formulario-campo">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    <label for="correo">Correo:</label>
+                    <input type="correo" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+                    <p class="error"></p>
+                </div>
+                <div class="formulario-campo">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Escribe aquí un asunto" required>
+                    <p class="error"></p>
                 </div>
                 <div class="formulario-campo">
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                    <p class="error"></p>
                 </div>
-                <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                <button disabled type="submit" class="boton-enviar">Enviar Mensaje</button>
+                <p class="mensaje-enviado"></p>
             </form>
 
             <div class="descargar-cv-contenido">

@@ -200,6 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `,
   };
 
+  // Skills popup
   const items = document.querySelectorAll(".skill__item");
 
   const popup = document.getElementById("popup");
@@ -208,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const popupTitle = document.getElementById("popup-title");
   const popupDescription = document.getElementById("popup-description");
 
+  
   items.forEach((item) => {
     item.addEventListener("click", () => {
       const skill = item.getAttribute("data-skill");
@@ -233,6 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
 function alternarDescripcion(element) {
     // Obtener el contenedor de la tarjeta que contiene la descripción
     var tarjeta = element.closest('.tarjeta-proyecto');
@@ -252,6 +256,7 @@ function alternarDescripcion(element) {
 
 
 
+
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("clase__menu-principal");
 
@@ -261,4 +266,79 @@ menuToggle.addEventListener("click", () => {
 
 
 
+// Seccion formulario de contacto
+const form = document.getElementById("contacto-formulario");
 
+form.addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value.tolowecase();
+    const asunto = document.getElementById("asunto").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    form.reset();
+        
+});
+
+//envio del formulario
+function enviarFormulario(nombre, correo, asunto, mensaje) {
+    console.log("Nombre: " + nombre);
+    console.log("Correo: " + correo);
+    console.log("Asunto: " + asunto);
+    console.log("Mensaje: " + mensaje);
+}
+
+//validacion del formulario
+function validacionFormulario() {
+
+    const errors = [];
+
+}
+
+function validarNombre(nombre) {
+    if (nombre.trim() === "") {
+        return "El nombre no puede estar vacío.";
+    } else if (nombre.length >= 50) {
+        return "El nombre no debe tener mas de 50 caracteres";
+    } else if (!/^[a-zA-Z\s]+$/.test(nombre)) {
+        return "El nombre solo puede contener letras y espacios.";
+    }
+
+    return null; // en caso de que no hayan errores
+}
+
+function validacionCorreo(correo) {
+    if (correo.trim() === "") {
+        return "El correo no puede estar vacío.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+        return "El correo no es válido. utiliza la estructura recomendada. Ejemplo:  texto@texto.com";
+    }
+
+    return null; // en caso de que no hayan errores
+}
+
+function validarAsunto(asunto) {
+    if (asunto.trim() === "") {
+        return "El asunto no puede estar vacío.";
+    } else if (asunto.length >= 50) {
+        return "El asunto no debe tener mas de 50 caracteres";
+    } else if (!/^[a-zA-Z\s]+$/.test(asunto)) {
+        return "El asunto solo puede contener letras y espacios.";
+    }
+
+    return null; // en caso de que no hayan errores
+}
+
+function validarMensaje(mensaje) {
+    if (mensaje.trim() === "") {
+        return "El mensaje no puede estar vacío.";
+    } else if (mensaje.length >= 300) {
+        return "El mensaje no debe tener mas de 300 caracteres";
+    } else if (!/^[a-zA-Z\s]+$/.test(mensaje)) {
+        return "El mensaje solo puede contener letras y espacios.";
+    }
+
+    return null; // en caso de que no hayan errores
+}
