@@ -209,7 +209,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const popupTitle = document.getElementById("popup-title");
   const popupDescription = document.getElementById("popup-description");
 
-  
   items.forEach((item) => {
     item.addEventListener("click", () => {
       const skill = item.getAttribute("data-skill");
@@ -226,36 +225,31 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.classList.remove("visible");
   });
 
+  // cierra el popup cuando se da click afuera
   popup.addEventListener("click", (e) => {
-    // Close the popup if the user clicks outside of it
     if (e.target === popup) {
       popup.classList.remove("visible");
     }
   });
 });
 
-
-
-
+// Agrega un evento de click a cada item de la lista de habilidades
 function alternarDescripcion(element) {
-    // Obtener el contenedor de la tarjeta que contiene la descripción
-    var tarjeta = element.closest('.tarjeta-proyecto');
+  // Obtener el contenedor de la tarjeta que contiene la descripción
+  var tarjeta = element.closest(".tarjeta-proyecto");
 
-    // Encontrar el párrafo de la descripción dentro de esa tarjeta
-    var descripcion = tarjeta.querySelector('.descripcion');
+  // Encontrar el párrafo de la descripción dentro de esa tarjeta
+  var descripcion = tarjeta.querySelector(".descripcion");
 
-    // Alternar la clase "expanded" para cambiar el estilo
-    if (descripcion.classList.contains('expanded')) {
-        descripcion.classList.remove('expanded'); // Contraer
-        element.textContent = "...ver más"; // Cambiar el texto del enlace
-    } else {
-        descripcion.classList.add('expanded'); // Expandir
-        element.textContent = "...ver menos"; // Cambiar el texto del enlace
-    }
+  // Alternar la clase "expanded" para cambiar el estilo
+  if (descripcion.classList.contains("expanded")) {
+    descripcion.classList.remove("expanded"); // Contraer
+    element.textContent = "...ver más"; // Cambiar el texto del enlace
+  } else {
+    descripcion.classList.add("expanded"); // Expandir
+    element.textContent = "...ver menos"; // Cambiar el texto del enlace
+  }
 }
-
-
-
 
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("clase__menu-principal");
@@ -266,79 +260,151 @@ menuToggle.addEventListener("click", () => {
 
 
 
-// Seccion formulario de contacto
+
+
+
+
+// VALIDACION FORMULARIO DE CONTACTO
 const form = document.getElementById("contacto-formulario");
+const botonEnviar = form.querySelector('button[type="submit"]');
 
+botonEnviar.disabled = true;
+
+//desabilitar el boton de enviar si hay errores
+form.addEventListener("input", () => {
+  const nombre = document.getElementById("nombre").value;
+  const correo = document.getElementById("correo").value;
+  const asunto = document.getElementById("asunto").value;
+  const mensaje = document.getElementById("mensaje").value;
+
+  const errors = validacionFormulario(nombre, correo, asunto, mensaje);
+
+  if (errors.length === 0) {
+    botonEnviar.disabled = false;
+  } else {
+    botonEnviar.disabled = true;
+  }
+});
+
+//finalizar el envio del formulario
 form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  limpiarErrores();
 
-    event.preventDefault();
+  const nombre = document.getElementById("nombre").value;
+  const correo = document.getElementById("correo").value;
+  const asunto = document.getElementById("asunto").value;
+  const mensaje = document.getElementById("mensaje").value;
 
-    const nombre = document.getElementById("nombre").value;
-    const correo = document.getElementById("correo").value.tolowecase();
-    const asunto = document.getElementById("asunto").value;
-    const mensaje = document.getElementById("mensaje").value;
+  const errors = validacionFormulario(nombre, correo, asunto, mensaje);
 
-    form.reset();
-        
+  if (errors.length > 0) {
+    mostrarErrores(errors);
+  } else {
+    enviarFormulario(nombre, correo, asunto, mensaje);
+    limpiarFormulario();
+  }
 });
 
 //envio del formulario
 function enviarFormulario(nombre, correo, asunto, mensaje) {
-    console.log("Nombre: " + nombre);
-    console.log("Correo: " + correo);
-    console.log("Asunto: " + asunto);
-    console.log("Mensaje: " + mensaje);
+  alert("Formulario enviado con éxito");
+  console.log("Nombre: " + nombre);
+  console.log("Correo: " + correo);
+  console.log("Asunto: " + asunto);
+  console.log("Mensaje: " + mensaje);
 }
 
 //validacion del formulario
-function validacionFormulario() {
+function validacionFormulario(nombre, correo, asunto, mensaje) {
+  const errors = [];
 
-    const errors = [];
+  const nombreError = validarNombre(nombre);
+  if (nombreError) {
+    errors.push({ field: "nombre", message: nombreError });
+  }
+  const correoError = validacionCorreo(correo);
+  if (correoError) {
+    errors.push({ field: "correo", message: correoError });
+  }
+  const asuntoError = validarAsunto(asunto);
+  if (asuntoError) {
+    errors.push({ field: "asunto", message: asuntoError });
+  }
+  const mensajeError = validarMensaje(mensaje);
+  if (mensajeError) {
+    errors.push({ field: "mensaje", message: mensajeError });
+  }
 
+  return errors;
 }
 
 function validarNombre(nombre) {
-    if (nombre.trim() === "") {
-        return "El nombre no puede estar vacío.";
-    } else if (nombre.length >= 50) {
-        return "El nombre no debe tener mas de 50 caracteres";
-    } else if (!/^[a-zA-Z\s]+$/.test(nombre)) {
-        return "El nombre solo puede contener letras y espacios.";
-    }
+  if (nombre.trim() === "") {
+    return "El nombre no puede estar vacío.";
+  } else if (nombre.length >= 50) {
+    return "El nombre no debe tener mas de 50 caracteres";
+  } else if (!/^[a-zA-Z\s]+$/.test(nombre)) {
+    return "El nombre solo puede contener letras y espacios.";
+  }
 
-    return null; // en caso de que no hayan errores
+  return null; // en caso de que no hayan errores
 }
 
 function validacionCorreo(correo) {
-    if (correo.trim() === "") {
-        return "El correo no puede estar vacío.";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
-        return "El correo no es válido. utiliza la estructura recomendada. Ejemplo:  texto@texto.com";
-    }
+  if (correo.trim() === "") {
+    return "El correo no puede estar vacío.";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+    return "El correo no es válido. utiliza la estructura recomendada. Ejemplo:  texto@texto.com";
+  }
 
-    return null; // en caso de que no hayan errores
+  return null; // en caso de que no hayan errores
 }
 
 function validarAsunto(asunto) {
-    if (asunto.trim() === "") {
-        return "El asunto no puede estar vacío.";
-    } else if (asunto.length >= 50) {
-        return "El asunto no debe tener mas de 50 caracteres";
-    } else if (!/^[a-zA-Z\s]+$/.test(asunto)) {
-        return "El asunto solo puede contener letras y espacios.";
-    }
+  if (asunto.trim() === "") {
+    return "El asunto no puede estar vacío.";
+  } else if (asunto.length >= 50) {
+    return "El asunto no debe tener mas de 50 caracteres";
+  } else if (!/^[a-zA-Z\s]+$/.test(asunto)) {
+    return "El asunto solo puede contener letras y espacios.";
+  }
 
-    return null; // en caso de que no hayan errores
+  return null; // en caso de que no hayan errores
 }
 
 function validarMensaje(mensaje) {
-    if (mensaje.trim() === "") {
-        return "El mensaje no puede estar vacío.";
-    } else if (mensaje.length >= 300) {
-        return "El mensaje no debe tener mas de 300 caracteres";
-    } else if (!/^[a-zA-Z\s]+$/.test(mensaje)) {
-        return "El mensaje solo puede contener letras y espacios.";
-    }
+  if (mensaje.trim() === "") {
+    return "El mensaje no puede estar vacío.";
+  } else if (mensaje.length >= 300) {
+    return "El mensaje no debe tener mas de 300 caracteres";
+  } else if (!/^[a-zA-Z\s]+$/.test(mensaje)) {
+    return "El mensaje solo puede contener letras y espacios.";
+  }
 
-    return null; // en caso de que no hayan errores
+  return null; // en caso de que no hayan errores
+}
+
+function mostrarErrores(errors) {
+  errors.forEach((error) => {
+    const errorElements = document.querySelectorAll(`.error`);
+    errorElements.forEach((element) => {
+      if (element.parentNode.querySelector(`[name="${error.field}"]`)) {
+        element.textContent = error.message;
+      }
+    });
+  });
+}
+
+// Función para limpiar mensajes de error
+function limpiarErrores() {
+  const errorElements = document.querySelectorAll(".error");
+  errorElements.forEach((element) => {
+    element.textContent = "";
+  });
+}
+
+// limpiar formulariio
+function limpiarFormulario() {
+  document.getElementById("contacto-formulario").reset();
 }
