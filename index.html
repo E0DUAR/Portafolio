@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
 </head>
 
 <body>
-    
+
     <header>
         <section class="contenedor__navegacion">
             <!-- Título del sitio web -->
@@ -47,7 +47,7 @@
         <section class="section-introduccion">
 
             <article class="clase__introduccion">
-        
+
                 <!-- Contenido izquierdo -->
                 <div class="clase__contenido-izquierdo">
                     <h1 class="clase__titulo-sitio-header">Hola, mi nombre es Luis Eduardo Dizu Mendez</h1>
@@ -62,26 +62,30 @@
                         realmente marquen la diferencia. Mi versatilidad es mi fortaleza, y siempre
                         estoy listo para enfrentar nuevos desafíos.
                     </p>
-        
+
                     <nav class="clase__menu-principal__social">
                         <ul>
-                            <li><a href="https://github.com/E0DUAR" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                            <li><a href="https://www.linkedin.com/in/eduardo-mendez-it/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="https://github.com/E0DUAR" target="_blank"><i class="fab fa-github"></i>
+                                    GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/eduardo-mendez-it/" target="_blank"><i
+                                        class="fab fa-linkedin"></i> LinkedIn</a></li>
                             <li><a href="#"><i class="fas fa-file-alt"></i> Currículo</a></li>
-                            <li><a href="https://wa.me/573005904287?text=Hola%20te%20escribo%20desde%20tu%20portafolio%20web%20para%20conocerte%20mejor" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                              
+                            <li><a href="https://wa.me/573005904287?text=Hola%20te%20escribo%20desde%20tu%20portafolio%20web%20para%20conocerte%20mejor"
+                                    target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+
                         </ul>
                     </nav>
                 </div>
-        
+
                 <!-- Contenido derecho -->
                 <div class="clase__contenido-derecho">
-                    <img class="image" src="./assets/Luis-Eduardo-Dizu-Mendez.png" alt="Fotografía de Luis Eduardo Dizu Mendez">
+                    <img class="image" src="./assets/Luis-Eduardo-Dizu-Mendez.png"
+                        alt="Fotografía de Luis Eduardo Dizu Mendez">
                 </div>
-        
+
             </article>
         </section>
-        
+
 
         <!-- Sección Acerca de Mí -->
         <section id="sobre" class="seccion__acerca">
@@ -321,7 +325,7 @@
 
             <div class="contenedor-proyectos">
 
-                
+
                 <article class="tarjeta-proyecto">
                     <img src="./assets/portafolio-imagen.png" alt="Imagen representativa del portafolio"
                         class="imagen-proyecto">
@@ -569,7 +573,7 @@
                     aprender, asumir nuevos retos y aportar soluciones creativas. Si tienes una idea, un proyecto o
                     simplemente quieres conectar, no dudes en escribirme.</p>
             </div>
-            <form  id="contacto-formulario" class="contacto-formulario">
+            <form id="contacto-formulario" class="contacto-formulario">
                 <div class="formulario-campo">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
@@ -617,14 +621,28 @@
                         <li><a href="https://www.linkedin.com/in/eduardo-mendez-it/" target="_blank"><i
                                     class="fab fa-linkedin"></i> Linkedin</a></li>
                         <li><a href="#"><i class="fas fa-file-alt" target="_blank"></i> Currículo</a></li>
-                        <li><a href="https://wa.me/573005904287?text=Hola%20te%20escribo%20desde%20tu%20portafolio%20web%20para%20conocerte%20mejor" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="https://wa.me/573005904287?text=Hola%20te%20escribo%20desde%20tu%20portafolio%20web%20para%20conocerte%20mejor"
+                                target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/emailJS.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "sW5IDLRy-5MGiZGRq",
+            });
+        })();
+    </script>
+
 </body>
 
 </html>

@@ -267,6 +267,7 @@ menuToggle.addEventListener("click", () => {
 // VALIDACION FORMULARIO DE CONTACTO
 const form = document.getElementById("contacto-formulario");
 const botonEnviar = form.querySelector('button[type="submit"]');
+export let datosFormulario = {};
 
 botonEnviar.disabled = true;
 
@@ -277,12 +278,10 @@ form.addEventListener("input", () => {
   const asunto = document.getElementById("asunto").value;
   const mensaje = document.getElementById("mensaje").value;
 
-  const errors = validacionFormulario(nombre, correo, asunto, mensaje);
-
-  if (errors.length === 0) {
-    botonEnviar.disabled = false;
-  } else {
+  if (nombre === "" || correo === "" || asunto === "" || mensaje === "") {
     botonEnviar.disabled = true;
+  } else {
+    botonEnviar.disabled = false;
   }
 });
 
@@ -296,6 +295,7 @@ form.addEventListener("submit", (event) => {
   const asunto = document.getElementById("asunto").value;
   const mensaje = document.getElementById("mensaje").value;
 
+
   const errors = validacionFormulario(nombre, correo, asunto, mensaje);
 
   if (errors.length > 0) {
@@ -308,15 +308,14 @@ form.addEventListener("submit", (event) => {
 
 //envio del formulario
 function enviarFormulario(nombre, correo, asunto, mensaje) {
+
   alert("Formulario enviado con éxito");
-  console.log("Nombre: " + nombre);
-  console.log("Correo: " + correo);
-  console.log("Asunto: " + asunto);
-  console.log("Mensaje: " + mensaje);
+  console.log("enviando datos del formulario");
+  datosFormulario = { nombre, correo, asunto, mensaje };
 }
 
 //validacion del formulario
-function validacionFormulario(nombre, correo, asunto, mensaje) {
+export function validacionFormulario(nombre, correo, asunto, mensaje) {
   const errors = [];
 
   const nombreError = validarNombre(nombre);
